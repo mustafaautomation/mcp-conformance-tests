@@ -5,6 +5,11 @@ updates:
     schedule: { interval: monthly }
     groups:
       npm: { patterns: ["*"] }
+    ignore:
+      # typescript-eslint 8.x supports TypeScript < 6.1; take TypeScript 7 together with a
+      # typescript-eslint release that supports it, not on its own.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: monthly }
