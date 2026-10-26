@@ -1,0 +1,34 @@
+{
+  "name": "mcp-conformance-tests",
+  "version": "1.0.0",
+  "description": "Black-box conformance checks for MCP servers over stdio, with mutant servers that prove each check works",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-conform": "dist/src/conformance/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.ts\"",
+    "format:check": "prettier --check \"**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "conform": "node dist/src/conformance/cli.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@modelcontextprotocol/server-everything": "2.0.1",
+    "@types/node": "^24.19.2",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
